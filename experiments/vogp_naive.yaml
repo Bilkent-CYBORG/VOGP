@@ -1,0 +1,119 @@
+experiment_name: ""  # Be careful not to override previous experiments!
+
+num_experiments: 8
+experiment_ids: 1  # If list: id's, If int: start id (from 1)
+
+# NOTE: Make sure the configurations of compared experiments match up,
+# including the order of elements.
+
+experiment1:
+  iteration: 10
+  datasets_and_workers: [["BC500", 2]]
+  epsilons: [0.1]
+  noise_var: 0.01
+  delta: 0.05
+  cone_degrees: [['theta', 60], ['theta', 90], ['theta', 120]]
+  conf_contractions: [32]
+  algorithm: "ADELGP"
+  ADELGP:
+    unknown_params: False
+    init_design_cnt: 1
+    save_all_round_results: False
+    rkhs_bound: False
+
+experiment2:
+  iteration: 10
+  datasets_and_workers: [["BC500", 2]]
+  epsilons: [0.1]
+  noise_var: 0.01
+  delta: 0.05
+  cone_degrees: [['theta', 60], ['theta', 90], ['theta', 120]]
+  conf_contractions: [32]
+  algorithm: "Naive"
+  Naive:
+    compare_experiment_id: 1
+    samples: null  # (dset x cone) x eps
+
+experiment3:
+  iteration: 10
+  datasets_and_workers: [["Lactose", 2]]
+  epsilons: [0.1]
+  noise_var: 0.01
+  delta: 0.05
+  cone_degrees: [['theta', 60], ['theta', 90], ['theta', 120]]
+  conf_contractions: [32]
+  algorithm: "ADELGP"
+  ADELGP:
+    unknown_params: False
+    init_design_cnt: 1
+    save_all_round_results: False
+    rkhs_bound: False
+
+experiment4:
+  iteration: 10
+  datasets_and_workers: [["Lactose", 2]]
+  epsilons: [0.1]
+  noise_var: 0.01
+  delta: 0.05
+  cone_degrees: [['theta', 60], ['theta', 90], ['theta', 120]]
+  conf_contractions: [32]
+  algorithm: "Naive"
+  Naive:
+    compare_experiment_id: 3
+    samples: null  # (dset x cone) x eps
+
+experiment5:
+  iteration: 10
+  datasets_and_workers: [["VehicleSafety", 2]]
+  epsilons: [0.1]
+  noise_var: 0.01
+  delta: 0.05
+  cone_degrees: [['theta', 60], ['theta', 90], ['theta', 120]]
+  conf_contractions: [32]
+  algorithm: "ADELGP"
+  ADELGP:
+    unknown_params: False
+    init_design_cnt: 1
+    save_all_round_results: False
+    rkhs_bound: False
+
+experiment6:
+  iteration: 10
+  datasets_and_workers: [["VehicleSafety", 2]]
+  epsilons: [0.1]
+  noise_var: 0.01
+  delta: 0.05
+  cone_degrees: [['theta', 60], ['theta', 90], ['theta', 120]]
+  conf_contractions: [32]
+  algorithm: "Naive"
+  Naive:
+    compare_experiment_id: 5
+    samples: null  # (dset x cone) x eps
+
+experiment7:
+  iteration: 10
+  datasets_and_workers: [["SnAr", 2]]
+  epsilons: [0.1]
+  noise_var: 0.01
+  delta: 0.05
+  cone_degrees: [['theta', 60], ['theta', 90], ['theta', 120]]
+  conf_contractions: [32]
+  algorithm: "ADELGP"
+  ADELGP:
+    unknown_params: False
+    init_design_cnt: 1
+    save_all_round_results: False
+    rkhs_bound: False
+
+experiment8:
+  iteration: 10
+  datasets_and_workers: [["SnAr", 2]]
+  epsilons: [0.1]
+  noise_var: 0.01
+  delta: 0.05
+  cone_degrees: [['theta', 60], ['theta', 90], ['theta', 120]]
+  conf_contractions: [32]
+  algorithm: "Naive"
+  Naive:
+    compare_experiment_id: 7
+    samples: null  # (dset x cone) x eps

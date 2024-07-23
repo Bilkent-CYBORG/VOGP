@@ -1,0 +1,7 @@
+# Files
+
+# Folders
+__pycache__/
+.vscode/
+outputs/
+plots/
