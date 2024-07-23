@@ -1,4 +1,4 @@
-## Code for "Vector Optimization in Active Leaning"
+## Code for "Vector Optimization with Gaussian Process Bandits"
 
 ### Setup
 ```setup
